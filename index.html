@@ -3,15 +3,17 @@
 <head>
     <title>Project Idea</title>
 </head>
-
 <body>
-    <h1>Your Airline Tickets</h1>
+    <h1>Airline Tickets</h1>
     <p>
         If you plan your ticket <span id="daysInAdvance"></span> days in advance. 
         You will get $<span id="discountPrice"></span> off your ticket purchase.
     </p>
+    <div style="width: 18em; height: 2em;">
+        <p id="qualifyingEvent">Please Choose your Date of Travel.</p>
+    </div>
     <input id="travelDate" type="date" onchange="calculateTicketPrice()">
-    <p>Price: $ <span id='price'>50.00</span></p>
+    <p>Price: $ <span id='price'></span></p>
     <script src="main.js"></script>
 </body>
 </html>
