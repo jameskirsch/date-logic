@@ -1,4 +1,4 @@
-'use strict'; // this will display bad syntax as real errors, used for debugging
+'use strict'; // this will display bad syntax as real errors, used to write secure javascript
 
 // Sets the initial price, discount price, and days in advance into the DOM
 var price = 50.00;
@@ -37,19 +37,19 @@ function calculateTicketPrice() {
     // Get The User's selection and the Projected Discount Date (days in advance from current date)
     var userSelectedTravelDate = new Date(document.getElementById('travelDate').value);
     console.log('User Selected Travel Date: ' + userSelectedTravelDate);
- 
+
     var projectedDiscountDate = addDaysToDate(today, daysInAdvance);
     console.log('Projected Discount Date: ' + projectedDiscountDate);
 
-    var qaulifyingEventElement = document.getElementById('qualifyingEvent');
+    var quallifyingEventElement = document.getElementById('qualifyingEvent');
     if (userSelectedTravelDate.getTime() > projectedDiscountDate.getTime()) {
-        qaulifyingEventElement.innerHTML = 'You Qualify for a Discount.';
-        qaulifyingEventElement.style.background = 'green';
+        quallifyingEventElement.innerHTML = 'You Qualify for a Discount.';
+        quallifyingEventElement.style.background = 'green';
         document.getElementById('price').innerHTML = (price - discountPrice);
         document.getElementById('price').style.background = 'lightgreen';
     } else {
-        qaulifyingEventElement.innerHTML = 'You do not Qualify for a Discount.';
-        qaulifyingEventElement.style.background = 'grey';
+        quallifyingEventElement.innerHTML = 'You do not Qualify for a Discount.';
+        quallifyingEventElement.style.background = 'grey';
         document.getElementById('price').innerHTML = price;
         document.getElementById('price').style.background = 'white';
     }
